@@ -1,6 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ReduxThunk from "redux-thunk"
+import Provider from "react-redux"
+import {createStore, applyMiddleware} from "redux"
+import combineReducers from './Redux/Reducers'
+
+const store = createStore(combineReducers,{}, applyMiddleware(ReduxThunk))
+
+
 
 function App() {
   return (
